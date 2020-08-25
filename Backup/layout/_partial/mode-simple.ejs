@@ -1,0 +1,63 @@
+<section class="archive-outer">
+    <section class="archive-inner">
+        <% var last; %>
+        <% page.posts.sort('date', -1).limit(10).each(function(post, i) { %>
+        <% var year = post.date.year(); %>
+        <% if (last != year){ %>
+            <% if (last != null){ %>
+            <% } %>
+            <% last = year; %>
+        <div class="archive-name <%if(theme.style.animation.open==true){%>animate__animated  animate__fadeInUp<% } %>"><%=  year %></div>
+        <% } %>
+          <a  href="<%=url_for(post.path)%>">
+          <div class="archive-post <%if(theme.style.animation.open==true){%>animate__animated  animate__fadeInUp<% } %>">
+            <div class="archive-post-title"><%=post.title%></div>
+            <div class="archive-post-date"><%=date(post.date,'MM-DD') %></div>
+            <!-- <%=full_date(post.date,'MMM D') %> -->
+          </div>
+          </a>
+        <% }) %>
+
+        <% if (page.total > 1){ %>
+          <% if (page.prev || page.next) { %>
+          <div class="paginator_diy">
+            
+            <div class="post-archive-prev">
+                <% if (page.prev){ %>
+                <a href="<%= url_for(page.prev_link) %>" class="post-archive-prev-text"> <%= "< Prev" %> </a>
+              <% } %>
+            </div>
+            
+            <div class="page2page">
+            <% var prev_text =  __('<');var next_text = __('>') %>
+            <%- paginator({
+              mid_size: 1,
+              end_size: 2,
+              prev_next: false
+            }) %>
+
+            </div>
+            
+            
+            <div class="post-archive-next">
+              <% if (page.next){ %>
+                <a href="<%= url_for(page.next_link) %>" class="post-archive-next-text"> <%= "Next >" %> </a>
+              <% } %>
+            </div>
+           
+          </div>
+          <% } %>  
+          
+          <nav class="paginator animate__animated  animate__fadeInUp">
+            <% var prev_text =  __('Prev');var next_text = __('Next') %>
+            <%- paginator({
+              prev_text: prev_text,
+              next_text: next_text
+            }) %>
+          </nav>
+        <% } %>
+    </section>
+</section>
+  
+
+  
