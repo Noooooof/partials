@@ -14,8 +14,13 @@ https://cdn.jsdelivr.net/gh//Noooooof/partials/filename
 
 
 
-## Backup
+## Theme
 
-- css
 - layout
-- favicon
+- scripts
+- source
+  - css
+  - js
+  - favicon
+- _config
+- readme
