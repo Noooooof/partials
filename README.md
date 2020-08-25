@@ -19,5 +19,3 @@ https://cdn.jsdelivr.net/gh//Noooooof/partials/filename
 - css
 - layout
 - favicon
-
-- rss
