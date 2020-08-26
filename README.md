@@ -9,6 +9,7 @@ https://cdn.jsdelivr.net/gh//Noooooof/partials/filename
 - H-TTF-Buming
 - Merriweather
 - Hack
+- Siyuan-Songti
 
 ## Image
 
