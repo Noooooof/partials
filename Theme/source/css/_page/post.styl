@@ -152,9 +152,10 @@
       margin: 6px 0px
       counter-increment: li
       &::before
+        display none
         content: counter(li)
         font-family: Merriweather
-        color: $color-text-main
+        color: $color-text-secondary
         margin-right: 0.7em
         text-align: right
 
@@ -355,6 +356,7 @@ code
   .post-content-inner-space
     flex-basis: $side-toc-width
     .space-toc-main
+      font-family CH, Gothic
       position: sticky
       top 30px
       max-height: 550px
@@ -363,7 +365,7 @@ code
       a 
         color: $color-text-secondary
         transition: all .3s
-        font-size: .8em
+        font-size: .9em
       ol
         list-style: none
         counter-reset: li
