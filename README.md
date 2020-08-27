@@ -33,7 +33,8 @@ https://cdn.jsdelivr.net/gh//Noooooof/partials/filename
 ```python
 $ npm outdated //修改package.json版本号
 $ rm -fr node_modules //清空node_modules目录
-$ npm install --save //更新
+$ npm install --save //更新插件
+$ npm upgrade //更新版本
 $ hexo version //检查确认
 ```
 
