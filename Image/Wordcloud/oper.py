@@ -65,4 +65,4 @@ def creatCloud(result):
 
 postContent = getFile(postPath)
 creatCloud(postContent)
-print('WordCloud has been built successfully.\n')
+print('Wordcloud has been built successfully.\n')
