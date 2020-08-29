@@ -5,7 +5,4 @@ python oper.py
 cd E:\Recent\MyBlog\source\_partials
 call update.cmd
 cd E:\Recent\MyBlog
-hexo clean && hexo g && hexo d
-pause
-cd E:\Recent\MyBlog\source\_partials\Release
-python deploy.py
+hexo clean && hexo g && hexo d && cd E:\Recent\MyBlog\source\_partials\Release && python deploy.py
