@@ -22,7 +22,7 @@
 
 
 
-## Release
+## Code
 
 ### cdn链接
 
@@ -41,11 +41,3 @@ $ npm install --save //更新插件
 $ npm upgrade //更新版本
 $ hexo version //检查确认
 ```
-
-
-
-### update相关
-
-- new 新建日记页面
-- show 本地展示
-- update 更新部署
