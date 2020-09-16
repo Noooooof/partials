@@ -13,7 +13,7 @@
 
 ## Image
 
-- Wordcloud
+- wordcloud
 
 
 
