@@ -29,22 +29,7 @@ tags:
 
 archive_img_mode:
   default_cover: #默认的cover
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/01.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/02.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/03.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/04.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/05.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/06.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/07.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/08.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/09.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/10.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/11.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/12.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/13.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/14.jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/15.jpg
-
+    
 # icon
 icon:  #标签页图标
 #  header

@@ -7,6 +7,7 @@
 - Merriweather
 - Hack
 - Siyuan-Songti
+- fontspider
 
 
 
