@@ -7,13 +7,12 @@
 - Merriweather
 - Hack
 - Siyuan-Songti
-- fontspider
 
 
 
 ## Image
 
-- wordcloud
+- Wordcloud
 
 
 
