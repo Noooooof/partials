@@ -136,7 +136,7 @@
 .post-content-inner ul,ol 
   padding-left 22px
   margin 7px 0px
-
+  text-indent 2em
 
 .post-content-inner
   ol
@@ -275,24 +275,26 @@ code
   border-radius 5px
   padding 20px 20px
   font-family "H-宫书", "Microsoft YaHei"
-  .post-me-link
-    color $color-text-secondary
-  .post-categoris-bottom-link
-    &:hover 
-      text-decoration none
-    .post-categoris-date
-      margin-right 20px
+  .post-categoris-list
+    text-indent 0em
+    .post-me-link
       color $color-text-secondary
-      font-size .85em
-      font-family "H-宫书", "Microsoft YaHei"
-      @media $mobile-m
-        display none
-.post-categoris-name 
-  font-size 1.2em
-  font-weight 1000
-  line-height 2.1
-  color $color-text-secondary
-  margin-bottom 10px
+    .post-categoris-bottom-link
+      &:hover 
+        text-decoration none
+      .post-categoris-date
+        margin-right 20px
+        color $color-text-secondary
+        font-size .85em
+        font-family "H-宫书", "Microsoft YaHei"
+        @media $mobile-m
+          display none
+  .post-categoris-name 
+    font-size 1.2em
+    font-weight 1000
+    line-height 2.1
+    color $color-text-secondary
+    margin-bottom 10px
 
 /* 翻页 */
 .post-nav
