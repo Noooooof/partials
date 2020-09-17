@@ -3,16 +3,19 @@
 ## Font
 
 - Gothic
-- H-TTF-Buming
 - Merriweather
 - Hack
+- H-TTF-Buming
 - Siyuan-Songti
+- FZSKBXKJW
+- H-GUNGSEO2.2
+- `Fontspider`
 
 
 
 ## Image
 
-- Wordcloud
+- `Wordcloud`
 
 
 
