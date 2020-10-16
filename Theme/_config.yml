@@ -38,7 +38,7 @@ site_name: Farewell.
 menu:
   HOME: /
   BLOG: /archives
-  FAV: /fav
+  ABOUT: /about
 
 
 ## 本地搜索
