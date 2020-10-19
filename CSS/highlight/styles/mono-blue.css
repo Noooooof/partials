@@ -5,7 +5,7 @@
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #e3e3e3;
+  background: #eaeef3;
   color: #00193a;
 }
 
@@ -35,7 +35,7 @@
 .hljs-name,
 .hljs-selector-id,
 .hljs-selector-class {
-  color: #756bb1;
+  color: #0048ab;
 }
 
 .hljs-meta,
