@@ -81,8 +81,8 @@ toc:
 plugins:
   # 代码高亮，想要使用代码高亮，得先把根目录的_config.yml里的highlight的enable置成false
   highlightjs:
-    js: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js
-    css: https://cdn.jsdelivr.net/gh//Noooooof/partials/CSS/highlight.css
+    js: https://cdn.jsdelivr.net/gh//Noooooof/partials/CSS/highlight/highlight.pack.js
+    css: https://cdn.jsdelivr.net/gh//Noooooof/partials/CSS/highlight/styles/agate.css
     # more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles
 
 # 评论系统设置
