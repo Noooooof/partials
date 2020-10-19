@@ -20,7 +20,7 @@
 
 
 
-# CSS
+## CSS
 
 `white`主题用到的`animate.css`文件。
 
@@ -29,6 +29,12 @@
 ## Theme
 
 备份```hexo-theme-white-master```的内容。
+
+
+
+## Blog_update
+
+备份`_update`的内容。
 
 
 
