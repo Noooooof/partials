@@ -16,6 +16,7 @@ Ported by Fabrício Tavares de Oliveira
 .hljs,
 .hljs-subst {
   color: #000;
+  background: #d8d8d8;
 }
 
 .hljs-string,
@@ -25,11 +26,13 @@ Ported by Fabrício Tavares de Oliveira
 .hljs-template-variable,
 .hljs-addition {
   color: #756bb1;
+  background: #d8d8d8;
 }
 
 .hljs-comment,
 .hljs-quote {
   color: #636363;
+  background: #d8d8d8;
 }
 
 .hljs-number,
@@ -38,11 +41,13 @@ Ported by Fabrício Tavares de Oliveira
 .hljs-bullet,
 .hljs-link {
   color: #31a354;
+  background: #d8d8d8;
 }
 
 .hljs-deletion,
 .hljs-variable {
   color: #88f;
+  background: #d8d8d8;
 }
 
 
@@ -60,12 +65,15 @@ Ported by Fabrício Tavares de Oliveira
 .hljs-selector-class,
 .hljs-strong {
   color: #3182bd;
+  background: #d8d8d8;
 }
 
 .hljs-emphasis {
   font-style: italic;
+  background: #d8d8d8;
 }
 
 .hljs-attribute {
   color: #e6550d;
+  background: #d8d8d8;
 }
