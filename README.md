@@ -22,7 +22,8 @@
 
 ## CSS
 
-`white`主题用到的`animate.css`文件。
+- animate.css
+- highlight.css
 
 
 

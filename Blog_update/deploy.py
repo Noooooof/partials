@@ -42,9 +42,9 @@ class TestBlog():
     self.driver.find_element(By.CSS_SELECTOR, ".redeploy-button").click()
     assert self.driver.switch_to.alert.text == u"确定重新部署 Gitee Pages 吗?"
     self.driver.switch_to.alert.accept()
-    time.sleep(120)
+    # time.sleep(120)
   
 test = TestBlog()
 test.setup_method()
 test.test_blog()
-test.teardown_method()
+# test.teardown_method()

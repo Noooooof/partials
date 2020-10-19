@@ -4,7 +4,7 @@ import os
 import re
 import time
 
-path = '../_posts'
+path = '../_posts' # _posts文件夹位置
 
 for file in os.listdir(path):
 	if ('.md' in file):
