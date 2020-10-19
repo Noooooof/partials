@@ -2,7 +2,7 @@
     <section class="archive-inner">
         <% var last; %>
         <% var now = moment(); %>
-        <% page.posts.sort('updated', -1).limit(10).each(function(post, i) { %>
+        <% page.posts.sort('updated', -1).each(function(post, i) { %>
         <% var year = post.date.year(); %>
         <% if (last != year){ %>
             <% if (last != null){ %>

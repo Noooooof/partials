@@ -32,7 +32,7 @@
                   <%}else{%>
                     <a  href="<%=url_for(pos.path)%>" class="post-categoris-bottom-link">
                     <%=pos.title%>
-                    <% if (pos.categories.data[0].name!='Essay'){%>
+                    <% if (pos.categories.data[0].name!='Essay' && pos.categories.data[0].name!='Tips'){%>
                     <span style="float: right" class="post-categoris-date"> <%=full_date(pos.date,'MMM DD')%> </span>
                     <% } %>
                     </a>
