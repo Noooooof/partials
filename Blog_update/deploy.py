@@ -32,7 +32,7 @@ class TestBlog():
     self.driver.find_element(By.LINK_TEXT, u"登录").click()
     self.driver.find_element(By.ID, "user_login").click()
     self.driver.find_element(By.ID, "user_login").send_keys("Noooooof")
-    self.driver.find_element(By.ID, "user_password").send_keys("t*/N4c7@i+N#U-f")
+    self.driver.find_element(By.ID, "user_password").send_keys("HYYn5lhgc1539")
     self.driver.find_element(By.CSS_SELECTOR, ".two:nth-child(3) label").click()
     self.driver.find_element(By.NAME, "commit").click()
     self.driver.refresh()
