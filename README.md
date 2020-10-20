@@ -23,7 +23,7 @@
 ## CSS
 
 - animate.css
-- highlight.css
+- `highlight`
 
 
 

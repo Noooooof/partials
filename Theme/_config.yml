@@ -116,7 +116,7 @@ comments:
 ############## 其他 ##############
 
 # 页脚
-footer: After long years. # markdown语法
+footer: After long yea[rss](http://www.noooooof.gitee.io/atom.xml). # markdown语法
 
 #有分类时是否开启menu分类页和自定义名字
 menu_categories:
