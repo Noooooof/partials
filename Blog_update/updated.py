@@ -22,17 +22,16 @@ for file in os.listdir(path):
 		postDate = re.findall(r'date: ([\s\S]*?)\n',postContent)[0] # date时间
 		postUpdate = re.findall(r'updated: ([\s\S]*?)\n',postContent)[0] # update时间
 
-		post = postContent # 准备覆写
-		
-		if (localDate in localUpdate): # 如果是当天修改的文件
-			postUpdate = localUpdate
-			post = re.sub(r'updated: [\s\S]*?\n','updated: '+ postUpdate +'\n', post) # 更新update时间
-			if (postCategoris == None):
-				post = re.sub(r'date: [\s\S]*?\n','date: '+ postUpdate +'\n', post) # 连载文章更新date时间
-		else:		
-			post = re.sub(r'updated: [\s\S]*?\n','updated: '+ postDate +'\n', post) # 以前的文章按date时间复位
-			
-		with open(fileName,'w',encoding="utf-8")as fo:
-			fo.write(post) # 覆写
-		
+		post = "" # 准备覆写
 
+		if (localDate not in localUpdate):
+			if (postDate != postUpdate):
+				post = re.sub(r'updated: [\s\S]*?\n','updated: '+ postDate +'\n', postContent) # 按date时间复位
+		else:
+			if (localDate in postUpdate): # 今日更新文章
+				if ((postCategoris==None) and (postDate != postUpdate)):
+					post = re.sub(r'date: [\s\S]*?\n','date: '+ postUpdate +'\n', postContent) # 连载按update时间更新date时间
+		
+		if (post):
+			with open(fileName,'w',encoding="utf-8")as fo:
+				fo.write(post) # 覆写
