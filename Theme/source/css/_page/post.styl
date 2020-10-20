@@ -75,14 +75,14 @@
       content "#"
       font-family: "H-宫书", "Gothic", "Microsoft YaHei"
       display inline-block
-      color #E3E3E3
+      color $color-text-weak
       margin-left 0.5rem
       font-weight: 1000
   h3 
     font-size 1.3em
     
     display: inline-block
-    box-shadow: inset 0 -0.5rem 0 #E3E3E3
+    box-shadow: inset 0 -0.5rem 0 $color-text-weak
   h4 
     font-size 1.15em
   h5 
@@ -91,7 +91,7 @@
     font-size 1.05em
   blockquote 
     margin-left 2em
-    border-left 4.2px solid #E3E3E3
+    border-left 4.2px solid $color-text-weak
     padding-left 17px
     color $color-text-secondary
     font-size 0.9em
@@ -118,7 +118,7 @@
     margin-bottom 30px
     height 3px
     border none
-    background-color #e3e3e3
+    background-color $color-text-weak
   pre 
     margin-top 10px
     margin-bottom 10px
@@ -192,7 +192,7 @@ table
     padding: .9rem
     border-width: 0.5px
     border-style: solid
-    border-color: rgb(248, 248, 248)
+    border-color: rgb(240, 240, 240)
     border-image: initial
   tbody
     display: table-row-group
@@ -208,7 +208,7 @@ table
 pre 
   .hljs 
     border-radius 10px
-    background-color #F8F8F8
+    background-color $color-text-back
 code,kbd,pre,samp 
   font-size .8em
   font-weight normal
@@ -225,7 +225,7 @@ code,kbd,pre,samp
 code 
   font-size 0.8em
   font-weight normal
-  background-color #F8F8F8
+  background-color $color-text-back
   color $color-text-main
   padding 4px 8px
   margin 0px 4px
@@ -233,7 +233,7 @@ code
 /* toc */
 /* 位于文章上方的toc */
 .toc-top 
-  border 1px solid #e3e3e3
+  border 1px solid $color-text-weak
   border-radius 2px
   padding 10px 20px
   list-style none
@@ -273,7 +273,7 @@ code
   line-height 2
   margin-top 30px
   margin-bottom 30px
-  border 1px solid #e3e3e3
+  border 1px solid $color-text-weak
   border-radius 5px
   padding 20px 20px
   font-family "H-宫书", "Gothic", "Microsoft YaHei"
@@ -283,7 +283,7 @@ code
     .post-me-link
       color $color-text-secondary
     .post-categoris-bottom-link
-      color #56b3ff
+      color $color-theme-weak
       &:hover 
         text-decoration none
       .post-categoris-date
@@ -382,7 +382,7 @@ code
           content: counter(li)
           font-size: .8em
           font-family: "H-宫书", "Gothic", "Microsoft YaHei"
-          color: #e3e3e3
+          color: $color-text-weak
           margin-right: 0.5em
           text-align: right
           transition: all .3s
