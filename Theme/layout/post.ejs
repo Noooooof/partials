@@ -20,30 +20,53 @@
         <%-page.content%>
         <!-- 分类文章 -->
         <% if(page.categories.data.length>0){ %>
-          <div class="post-categoris-bottom">
-            <div class="post-categoris-name"><%=page.categories.data[0].name%></div>
-            <ul class="post-categoris-list">
-            <% site.posts.sort('date',-1).each(pos => {%>
-            <%if(pos.categories.data.length>0){%>
-              <%if(pos.categories.data[0].name===page.categories.data[0].name){%>
-                <li>
-                  <%if(pos.title===page.title){%>
-                    <span class="post-me-link"> <%=pos.title%> </span>
-                  <%}else{%>
-                    <a  href="<%=url_for(pos.path)%>" class="post-categoris-bottom-link">
-                    <%=pos.title%>
-                    <% if (pos.categories.data[0].name!='Essay' && pos.categories.data[0].name!='Tips'){%>
-                    <span style="float: right" class="post-categoris-date"> <%=full_date(pos.date,'MMM DD')%> </span>
+          <% if(page.categories.data[0].name==='Diary'){ %>
+            <div class="post-categoris-bottom">
+              <div class="post-categoris-name"><%=full_date(page.date,'YYYY.MM')%></div>
+              <ul class="post-categoris-list">
+              <% site.posts.sort('date',-1).each(pos => {%>
+              <%if(pos.categories.data.length>0){%>
+                <%if(pos.categories.data[0].name==='Diary' && full_date(pos.date,'MMM YYYY')===full_date(page.date,'MMM YYYY')){%>
+                  <li>
+                    <%if(pos.title===page.title && pos.date===page.date){%>
+                      <span class="post-me-link"> <%=pos.title%> </span>
+                    <%}else{%>
+                      <a  href="<%=url_for(pos.path)%>" class="post-categoris-bottom-link">
+                      <%=pos.title%>
+                      <span style="float: right" class="post-categoris-date"> <%=full_date(pos.date,'MMM DD')%> </span>
+                      </a>
                     <% } %>
-                    </a>
-                  <% } %>
-                </li>
-              <%}%>
-            <%};%>
-            <% }); %>
-            </ul>
-          </div>
+                  </li>
+                <%}%>
+              <%};%>
+              <% }); %>
+              </ul>
+            </div>
+          <% } else { %>
+            <div class="post-categoris-bottom">
+              <div class="post-categoris-name"><%=page.categories.data[0].name%></div>
+              <ul class="post-categoris-list">
+              <% site.posts.sort('date',-1).each(pos => {%>
+              <%if(pos.categories.data.length>0){%>
+                <%if(pos.categories.data[0].name===page.categories.data[0].name){%>
+                  <li>
+                    <%if(pos.title===page.title && pos.date===page.date){%>
+                      <span class="post-me-link"> <%=pos.title%> </span>
+                    <%}else{%>
+                      <a  href="<%=url_for(pos.path)%>" class="post-categoris-bottom-link">
+                      <%=pos.title%>
+                      </a>
+                    <% } %>
+                  </li>
+                <%}%>
+              <%};%>
+              <% }); %>
+              </ul>
+            </div>
+          <% } %>
         <% } %>
+
+
         <!-- 翻页 -->
         <% if (page.prev || page.next) { %>
           <div class="post-nav">

@@ -15,21 +15,18 @@ for file in os.listdir(path):
 		localDate = time.strftime("%Y-%m-%d", time.localtime()) # 当前时间
 		localUpdate = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(os.stat(fileName).st_mtime)) # 文件修改时间
 		
-		postCategoris = re.search(r'categories: \d*\.\d*\n',postContent)
-		if (postCategoris == None):
-			postCategoris = re.search(r'categories: \'\d*\.\d*\'\n',postContent) # 非None就是日记
-
+		postCategoris = re.findall(r'categories: ([\s\S]*?)\n',postContent)[0] # 分类
 		postDate = re.findall(r'date: ([\s\S]*?)\n',postContent)[0] # date时间
 		postUpdate = re.findall(r'updated: ([\s\S]*?)\n',postContent)[0] # update时间
 
 		post = "" # 准备覆写
 
-		if (localDate not in localUpdate):
+		if (localDate not in localUpdate): # 过往文章
 			if (postDate != postUpdate):
 				post = re.sub(r'updated: [\s\S]*?\n','updated: '+ postDate +'\n', postContent) # 按date时间复位
 		else:
 			if (localDate in postUpdate): # 今日更新文章
-				if ((postCategoris==None) and (postDate != postUpdate)):
+				if ((postCategoris != '\'Diary\'') and (postDate != postUpdate)):
 					post = re.sub(r'date: [\s\S]*?\n','date: '+ postUpdate +'\n', postContent) # 连载按update时间更新date时间
 		
 		if (post):
