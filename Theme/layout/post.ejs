@@ -1,16 +1,3 @@
-<!-- add calendar widget -->
-  <script src="/js/calendar.js"></script>
-  <script src="/js/languages.js"></script>
-  <script type="text/javascript">
-    $(function() {
-    <% if (theme.calendar.options){ %>
-      $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>', $.extend(<%- JSON.stringify(theme.calendar.options ) %>, {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
-    <% }else{ %>
-      $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>',{single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
-    <% } %>
-    });
-  </script>
-
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-intro">
@@ -79,11 +66,6 @@
         <% } %>
 
         <!-- 日历云 -->
-
-         <div class="post-calendar">
-        	<div class="post-calendar-title"><%= __('calendar') %></div>
-			<div id="calendar"></div>
-        </div>
         <!-- 翻页 -->
         <% if (page.prev || page.next) { %>
           <div class="post-nav">

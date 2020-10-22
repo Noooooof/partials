@@ -134,3 +134,7 @@ archive_tab_name: Blog
 #图片懒加载
 lazyload:
   open: true #是否开启
+
+# 日历云
+calendar:
+  language: zh-CN
