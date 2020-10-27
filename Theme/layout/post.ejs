@@ -23,7 +23,7 @@
             <div class="post-categoris-bottom">
               <div class="post-categoris-name"><%=full_date(page.date,'YYYY.MM')%></div>
               <ul class="post-categoris-list">
-              <% site.posts.sort('date',-1).each(pos => {%>
+              <% site.posts.sort('date',1).each(pos => {%>
               <%if(pos.categories.data.length>0){%>
                 <%if(pos.categories.data[0].name==='Diary' && full_date(pos.date,'MMM YYYY')===full_date(page.date,'MMM YYYY')){%>
                   <li>
