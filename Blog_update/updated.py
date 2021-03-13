@@ -51,3 +51,4 @@ def finddir(tag,path):
 	return
 
 finddir('post',postpath)
+print('文件处理完成...')
