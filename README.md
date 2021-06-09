@@ -1,6 +1,6 @@
 # Partials of my blog.
 
-真的恶心坏了。
+
 
 ## Font
 
