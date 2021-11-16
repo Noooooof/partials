@@ -18,7 +18,10 @@
 
 ## Image
 
-- `Wordcloud`
+
+
+## Function
+- Wordcloud
 
 
 

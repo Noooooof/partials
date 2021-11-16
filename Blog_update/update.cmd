@@ -1,8 +1,9 @@
 @echo off
 E:
-python E:\Recent\MyBlog\source\_partials\Image\Wordcloud\cloud.py
+cd E:\Recent\MyBlog\source\_partials
+call de_git.bat
 echo.
-echo Wordcloud done.
+echo Files updated.
 echo.
 cd E:\Recent\MyBlog\source\_update && python updated.py
 echo Essays formatted.
