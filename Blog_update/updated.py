@@ -48,6 +48,8 @@ def finddir(tag,path):
 			else:
 				if (re.search(r'\.md$',file)!=None):
 					oper(tag,filepath)
+					print('...')
 	return
 
 finddir('post',postpath)
+print('\nEssays formatted.\n')
