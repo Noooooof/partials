@@ -9,8 +9,8 @@ from wordcloud import WordCloud, ImageColorGenerator
 import numpy as np
 import PIL.Image as Image
 
-postPath = '../../../_posts' # _posts文件夹位置
-fontPath = '../../Font/H-TTF-BuMing-R-2.ttf' # 字体文件位置
+postPath = 'E:/Recent/MyBlog/source/_posts' # _posts文件夹位置
+fontPath = 'E:/Recent/MyBlog/source/font/H-GUNGSEO2.2.ttf' # 字体文件位置
 path = os.path.dirname(__file__) # 所在文件夹位置
 
 def clearFile(content):
