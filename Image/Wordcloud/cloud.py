@@ -15,21 +15,27 @@ path = os.path.dirname(__file__) # 所在文件夹位置
 
 def clearFile(content):
 	fileContent = ""
-	if (content.find("tags: silly") == -1): # 如果没加密
-		contentClrHead = re.sub(r'^---\n([\s\S]*)\n---',"",content)
-		contentClrLine = re.sub(r'<br\/>',"",contentClrHead)
-		contentClrCode = re.sub(r'```\n([\s\S]*)\n```',"",contentClrLine)
-		contentClrFormat = re.sub(r'[#*>\s`]',"",contentClrCode)
-		contentClrHtml = re.sub(r'\[([\s\S]*)\]\(http.*\)',"",contentClrFormat)
-		fileContent = contentClrHtml
+	contentClrHead = re.sub(r'^---\n([\s\S]*?)\n---',"",content)
+	contentClrLine = re.sub(r'<br>',"",contentClrHead)
+	contentClrCode = re.sub(r'```\n([\s\S]*?)\n```',"",contentClrLine)
+	contentClrHtml = re.sub(r'\[([\s\S]*?)\]\(http.*\)',"",contentClrCode)
+	contentClrFormat = re.sub(r'[#*>\s`]',"",contentClrHtml)
+	fileContent = contentClrFormat
 	return fileContent
 
-def getFile(logPath):
+def scanFile(path):
 	text = ""
-	for file in os.listdir(logPath):
-		fileInput = os.path.join(logPath,file)
-		with open(fileInput,'r',encoding="utf-8")as fi:
-			text += clearFile(fi.read())
+	filelist = os.listdir(path)
+	for filename in filelist:
+		filepath = os.path.join(path,filename)
+		if os.path.isdir(filepath):
+			if re.match(r'[_\.]',filename):
+				pass
+			else:
+				text += scanFile(filepath)
+		else:
+			with open(filepath,'r',encoding="utf-8")as fi:
+				text += clearFile(fi.read())
 	return text
 
 def creatCloud(result):
@@ -63,6 +69,6 @@ def creatCloud(result):
 	plt.show()
 	'''
 
-postContent = getFile(postPath)
+postContent = scanFile(postPath)
 creatCloud(postContent)
 print('Wordcloud has been built successfully.\n')
