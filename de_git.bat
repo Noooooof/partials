@@ -1,6 +1,8 @@
 @echo off
 E:
 python E:\Recent\MyBlog\source\_partials\Image\Wordcloud\cloud.py
+echo 词云制作完成......
+echo.
 rd E:\Recent\MyBlog\source\_partials\Theme /s /q
 xcopy E:\Recent\MyBlog\themes\hexo-theme-white-master E:\Recent\MyBlog\source\_partials\Theme\ /s /e /q
 rd E:\Recent\MyBlog\source\_partials\Blog_update /s /q
@@ -9,5 +11,5 @@ git add .
 git status -s
 git commit -m "easy-update"
 git push
-echo partials updated.
+echo 附件上传完成......
 echo.

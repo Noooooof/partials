@@ -77,4 +77,3 @@ def creatCloud(result):
 
 postContent = scanFile(postPath)
 creatCloud(clearName(postContent))
-print('Wordcloud has been built successfully.\n')
