@@ -38,6 +38,12 @@ def scanFile(path):
 				text += clearFile(fi.read())
 	return text
 
+def clearName(content):
+	namelist = ['远山有灯','斯丢匹德做个人吧','岸边渡鸦','余娱余愚','Nof','君子不器','NULL','Prisoner24601','咩','斯丢匹德是个废物','插兜','斯丢匹德扑棱扑棱','斯丢匹德']
+	for name in namelist:
+		content = re.sub(name,'',content)
+	return content
+
 def creatCloud(result):
 	# 分词
 	wordList = jieba.lcut(result) 
@@ -70,5 +76,5 @@ def creatCloud(result):
 	'''
 
 postContent = scanFile(postPath)
-creatCloud(postContent)
+creatCloud(clearName(postContent))
 print('Wordcloud has been built successfully.\n')
