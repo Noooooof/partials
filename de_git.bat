@@ -9,3 +9,5 @@ git add .
 git status -s
 git commit -m "easy-update"
 git push
+echo partials updated.
+echo.
