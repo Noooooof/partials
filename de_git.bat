@@ -1,6 +1,6 @@
 @echo off
 E:
-python E:\Recent\MyBlog\source\_partials\Image\Wordcloud\cloud.py
+python E:\Recent\MyBlog\source\_partials\Function\Wordcloud\cloud.py
 echo.
 echo Wordcloud done.
 echo.
