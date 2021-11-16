@@ -48,7 +48,7 @@ def finddir(tag,path):
 			else:
 				if (re.search(r'\.md$',file)!=None):
 					oper(tag,filepath)
-					print('...',end='')
+					print('.',end='')
 	return
 
 finddir('post',postpath)
