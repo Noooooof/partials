@@ -34,7 +34,7 @@ def oper(tag,fileName):
 	if (flag):
 		with open(fileName,'w',encoding="utf-8")as fo:
 			fo.write(post) # 覆写
-		print('This file has been rewritten: '+fileName)
+		print('This file has been rewritten: '+fileName[9:])
 
 	return
 
