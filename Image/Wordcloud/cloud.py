@@ -23,11 +23,11 @@ def clearFile(content):
 	fileContent = contentClrFormat
 	return fileContent
 
-def scanFile(path):
+def scanFile(findpath):
 	text = ""
-	filelist = os.listdir(path)
+	filelist = os.listdir(findpath)
 	for filename in filelist:
-		filepath = os.path.join(path,filename)
+		filepath = os.path.join(findpath,filename)
 		if os.path.isdir(filepath):
 			if re.match(r'[_\.]',filename):
 				pass
@@ -44,7 +44,7 @@ def clearName(content):
 		content = re.sub(name,'',content)
 	return content
 
-def creatCloud(result):
+def creatCloud(result,imgpath):
 	# 分词
 	wordList = jieba.lcut(result) 
 
@@ -68,7 +68,7 @@ def creatCloud(result):
 
 
 	wordCloud = WordCloud(background_color ="white",max_words = 1000,mask=coloring, color_func=imageColors, max_font_size=96,random_state=42, scale=3,font_path = fontPath).generate_from_frequencies(wordCounts)
-	wordCloud.to_file(os.path.join(path,'blog.png'))
+	wordCloud.to_file(os.path.join(imgpath,'wordcloud.png'))
 	'''
 	plt.imshow(wordCloud)
 	plt.axis('off')
@@ -76,4 +76,4 @@ def creatCloud(result):
 	'''
 
 postContent = scanFile(postPath)
-creatCloud(clearName(postContent))
+creatCloud(clearName(postContent),'E:/Recent/MyBlog/source/img')
