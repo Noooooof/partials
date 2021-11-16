@@ -34,6 +34,7 @@ def oper(tag,fileName):
 	if (flag):
 		with open(fileName,'w',encoding="utf-8")as fo:
 			fo.write(post) # 覆写
+		print('This file has been rewritten: '+fileName)
 
 	return
 
@@ -48,7 +49,6 @@ def finddir(tag,path):
 			else:
 				if (re.search(r'\.md$',file)!=None):
 					oper(tag,filepath)
-					print('.',end='')
 	return
 
 finddir('post',postpath)
