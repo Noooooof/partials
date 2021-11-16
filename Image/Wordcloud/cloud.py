@@ -76,4 +76,4 @@ def creatCloud(result,imgpath):
 	'''
 
 postContent = scanFile(postPath)
-creatCloud(clearName(postContent),'E:/Recent/MyBlog/source/img')
+creatCloud(clearName(postContent), path)
