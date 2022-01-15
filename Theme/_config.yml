@@ -53,7 +53,7 @@ search:
 # 自我介绍
 intro:
   title: Hi. I'm Nof. # 
-  sub: 'Passer, deliciae meae puellae.' # markdown语法 Get drunk! Stay drunk! <br>On wine, virtue, poetry, whatever! 
+  sub: 'Get drunk! Stay drunk! <br>On wine, virtue, poetry, whatever!' # markdown语法 
   avator: #头像 暂时还没用到
   author: Nof #所有文章的默认作者
 
