@@ -37,7 +37,7 @@ archive_img_mode:
 # icon
 icon:  #标签页图标
 #  header
-site_name: Passer. # Cheers.
+site_name: Cheers. # Passer.
 
 menu:
   HOME: /
