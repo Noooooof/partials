@@ -77,4 +77,4 @@ def creatCloud(result,imgpath):
 
 postContent = scanFile(postPath)
 creatCloud(clearName(postContent), 'E:/Recent/MyBlog/source/_partials/Image')
-print('\nWordcloud created.\n')
+print('Wordcloud created.\n')

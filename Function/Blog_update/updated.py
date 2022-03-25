@@ -4,18 +4,17 @@ import os
 import re
 import time
 
-postpath = '../_posts' # _posts文件夹位置
+postpath = 'E:/Recent/OneDrive - pku.edu.cn/Note/Blog' # _posts文件夹位置
 
 def oper(tag,fileName):
-
 	with open(fileName,'r',encoding="utf-8")as fi:
 		postContent = fi.read() # markdown文件内容
 
 	post = postContent # 准备覆写
 	flag = 0
 
-	postCategoris = re.findall(r'categories: ([\s\S]*?)\n',postContent)[0] # 分类
-	if (postCategoris!=tag):
+	postCategoris = re.search(r'categories: ([\s\S]*?)\n',postContent) # 分类
+	if (postCategoris.group(1)!=tag):
 		flag = 1
 		post = re.sub(r'categories: ([\s\S]*?)\n','categories: ' + tag + '\n',post)
 
@@ -34,15 +33,13 @@ def oper(tag,fileName):
 	if (flag):
 		with open(fileName,'w',encoding="utf-8")as fo:
 			fo.write(post) # 覆写
-		print('This file has been rewritten: '+fileName[9:])
+		print('This file has been rewritten: '+fileName[41:])
 
 	return
 
 def finddir(tag,path):
 	for file in os.listdir(path):
-
 		filepath = os.path.join(path,file)
-
 		if (re.search(r'^[\._]',file)==None):
 			if os.path.isdir(filepath):
 				finddir(file,filepath)
@@ -51,5 +48,5 @@ def finddir(tag,path):
 					oper(tag,filepath)
 	return
 
-finddir('post',postpath)
+finddir('Blog',postpath)
 print('\nEssays formatted.\n')
