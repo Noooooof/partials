@@ -4,7 +4,7 @@ import os
 import re
 import time
 
-postpath = 'E:/Recent/OneDrive - pku.edu.cn/Note/Blog' # _posts文件夹位置
+postpath = 'E:/Recent/MyBlog/source/_posts' # _posts文件夹位置
 
 def oper(tag,fileName):
 	with open(fileName,'r',encoding="utf-8")as fi:
@@ -33,7 +33,7 @@ def oper(tag,fileName):
 	if (flag):
 		with open(fileName,'w',encoding="utf-8")as fo:
 			fo.write(post) # 覆写
-		print('This file has been rewritten: '+fileName[41:])
+		print('This file has been rewritten: '+fileName[len(postpath):])
 
 	return
 
