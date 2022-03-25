@@ -15,4 +15,3 @@ git push
 echo.
 echo Files updated.
 echo.
-pause
