@@ -14,3 +14,4 @@ git push
 echo.
 echo Files updated.
 echo.
+for /l %%a in (1 1 8000) do @ver>nul
