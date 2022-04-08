@@ -1,4 +1,5 @@
 @echo off
+color 02
 E:
 python E:\Recent\MyBlog\source\_update\updated.py
 python E:\Recent\MyBlog\source\_partials\Function\Wordcloud\cloud.py
@@ -13,3 +14,4 @@ git push
 echo.
 echo Files updated.
 echo.
+pause>nul
